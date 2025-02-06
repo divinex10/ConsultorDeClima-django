@@ -17,5 +17,5 @@ Este é um projeto desenvolvido por *Guilherme* e *Luis, estudantes de tecnologi
 
 ## Contato
 
-- *Guilherme* - [GitHub](https://github.com/divinex10)
-- *Luis* - [GitHub](https://github.com/luisbragac)
+- *Guilherme Teixeira* - [GitHub](https://github.com/divinex10)
+- *Luis Eduardo* - [GitHub](https://github.com/luisbragac)
