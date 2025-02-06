@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Previsão do Tempo</h1>
+            <div class="search">
+                <input type="text" placeholder="Buscar cidade...">
+                <button>🔍</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="clima-atual">
+                <div class="info-principal">
+                    <h2>{{ clima.cidade }}</h2>
+                    <div class="temperatura">
+                        <span class="icone">☀️</span>
+                        <span class="valor" id="valor-temperatura">{{ clima.temperatura|floatformat:0 }}ºC</span>
+                    </div>
+                    <p class="condicao">{{ clima.tempo }}</p>
+                </div>
+                <div class="detalhes">
+                    <div class="detalhe">
+                        <span class="icone">💧</span>
+                        <span>Umidade: 65%</span>
+                    </div>
+                    <div class="detalhe">
+                        <span class="icone">💨</span>
+                        <span>Vento: 12 km/h</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="previsao">
+                <div class="dia">
+                    <h3>Segunda</h3>
+                    <span class="icone">☀️</span>
+                    <span class="temp">27°C</span>
+                    <p>Ensolarado</p>
+                </div>
+                <div class="dia">
+                    <h3>Terça</h3>
+                    <span class="icone">☁️</span>
+                    <span class="temp">25°C</span>
+                    <p>Nublado</p>
+                </div>
+                <div class="dia">
+                    <h3>Quarta</h3>
+                    <span class="icone">🌧️</span>
+                    <span class="temp">23°C</span>
+                    <p>Chuvoso</p>
+                </div>
+                <div class="dia">
+                    <h3>Quinta</h3>
+                    <span class="icone">☀️</span>
+                    <span class="temp">26°C</span>
+                    <p>Ensolarado</p>
+                </div>
+                <div class="dia">
+                    <h3>Sexta</h3>
+                    <span class="icone">☁️</span>
+                    <span class="temp">24°C</span>
+                    <p>Nublado</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

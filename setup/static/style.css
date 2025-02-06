@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to right, #4b6cb7, #182848);
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+h1 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.search {
+    display: flex;
+    gap: 10px;
+}
+
+.search input {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    min-width: 250px;
+}
+
+.search input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: white;
+}
+
+.clima-atual {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.info-principal h2 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.temperatura {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.temperatura .icone {
+    font-size: 2.5rem;
+}
+
+.temperatura .valor {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.condicao {
+    color: white;
+    margin-top: 5px;
+}
+
+.detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detalhe {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.detalhe .icone {
+    font-size: 1.2rem;
+}
+
+.previsao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.dia {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.dia h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.dia .icone {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.dia .temp {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    margin: 10px 0;
+}
+
+.dia p {
+    color: white;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .clima-atual {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .detalhes {
+        width: 100%;
+        align-items: center;
+    }
+}
