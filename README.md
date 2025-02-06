@@ -7,7 +7,6 @@ Este é um projeto desenvolvido por *Guilherme* e *Luis, estudantes de tecnologi
 ## Funcionalidades
 
 - *Buscar informações climáticas de qualquer cidade*
-- *Exibir temperatura, umidade e condições do tempo*
 - *Interface responsiva e intuitiva*
 
 ## Tecnologias Utilizadas
