@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Este é um projeto desenvolvido por *Guilherme* e *Luis, estudantes de tecnologia, que permite consultar o clima de qualquer cidade. A aplicação foi desenvolvida utilizando **HTML, **CSS* e *Django*.
+Este é um projeto desenvolvido por *Guilherme* e *Luis*, estudantes de tecnologia, que permite consultar o clima de qualquer cidade. A aplicação foi desenvolvida utilizando *HTML*, *CSS* e *Django*.
 
 ## Funcionalidades
 
