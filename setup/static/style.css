@@ -11,6 +11,29 @@ body {
     padding: 20px;
 }
 
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 3px;
+    background-color:#f3f5f7;
+    color:rgb(0, 0, 0);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.footer a {
+    color: #1875E8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
