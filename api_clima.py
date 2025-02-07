@@ -1,4 +1,5 @@
 import requests
+from deep_translator import GoogleTranslator
 
 API_KEY = 'b274188bc5e9773a7a447f7fc220f0c6'
 
@@ -39,13 +40,17 @@ def info_clima(latitude, longitude):
             temp_max = info_clima['main']['temp_max']
             temp_min = info_clima['main']['temp_min']
 
+            #tradução do tempo de en para pt-br
+            tempo_traduzido = GoogleTranslator(source='en', target='pt').translate(tempo)
+            print(tempo_traduzido)
+
             # Strings
             temperatura = f'{temperatura:.2f}'     
 
         
             return {
             'temperatura' : temperatura,
-            'tempo' : tempo,
+            'tempo' : tempo_traduzido,
             'cidade' : cidade_nome,
             'temp_max' : temp_max,
             'temp_min' : temp_min

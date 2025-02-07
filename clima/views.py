@@ -2,9 +2,9 @@ from django.shortcuts import render
 from api_clima import info_clima, info_geo
 
 def index(request):
-    cidade = "Fortaleza"
+    cidade = "Brasília"
 
-    estado = "CE"
+    estado = "DF"
 
     coordenadas = info_geo(cidade, estado)
 
