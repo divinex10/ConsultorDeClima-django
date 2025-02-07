@@ -115,6 +115,14 @@ h1 {
     font-weight: bold;
 }
 
+.temp-min-max {
+    display: flex;
+    gap: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
 .condicao {
     color: white;
     margin-top: 5px;
@@ -187,5 +195,9 @@ h1 {
     .detalhes {
         width: 100%;
         align-items: center;
+    }
+
+    .temp-min-max {
+        justify-content: center;
     }
 }

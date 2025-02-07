@@ -32,18 +32,32 @@ def info_clima(latitude, longitude):
 
     if response_clima.status_code == 200:
         info_clima = response_clima.json()
-        temperatura = info_clima['main']['temp']
-        tempo = info_clima['weather'][0]['main']
 
-        # Strings
-        temperatura = f'{temperatura:.2f}'
+        try:
+            temperatura = info_clima['main']['temp']
+            tempo = info_clima['weather'][0]['main']
+            temp_max = info_clima['main']['temp_max']
+            temp_min = info_clima['main']['temp_min']
+
+            # Strings
+            temperatura = f'{temperatura:.2f}'     
 
         
-        return {
+            return {
             'temperatura' : temperatura,
             'tempo' : tempo,
-            'cidade' : cidade_nome
-
-        }
+            'cidade' : cidade_nome,
+            'temp_max' : temp_max,
+            'temp_min' : temp_min
+                }
+        
+        except:
+            return 'Erro: Dados de clima não encontrados na resposta da API.'
     else:
         return f'Erro na API de clima: {response_clima.status_code}'
+
+coordenadas = info_geo('Fortaleza', 'CE')
+lat = coordenadas[0]
+lon = coordenadas[1]
+
+print(info_clima(lat, lon))

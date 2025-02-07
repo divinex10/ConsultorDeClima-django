@@ -11,7 +11,7 @@
     <div class="container">
         <header>
             <h1>Previsão do Tempo</h1>
-            <div class="search">
+            <div class="busca">
                 <input type="text" placeholder="Buscar cidade...">
                 <button>🔍</button>
             </div>
@@ -23,7 +23,11 @@
                     <h2>{{ clima.cidade }}</h2>
                     <div class="temperatura">
                         <span class="icone">☀️</span>
-                        <span class="valor" id="valor-temperatura">{{ clima.temperatura|floatformat:0 }}ºC</span>
+                        <span class="valor">{{ clima.temperatura | floatformat:0 }}°C</span>
+                    </div>
+                    <div class="temp-min-max">
+                        <span>Min:{{ clima.temp_min | floatformat:0 }}°C</span>
+                        <span>Max:{{ clima.temp_max | floatformat:0 }}°C</span>
                     </div>
                     <p class="condicao">{{ clima.tempo }}</p>
                 </div>
@@ -73,10 +77,5 @@
             </div>
         </main>
     </div>
-
-    <footer class="footer">
-        Desenvolvido por <a href="https://www.instagram.com/luisbragac/" target="blank">@luisbragac</a> e <a href="https://www.instagram.com/_.gstx/" target="blank">@_.gstx</a>
-    </footer>
-
 </body>
 </html>
