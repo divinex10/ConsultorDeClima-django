@@ -50,7 +50,8 @@ def info_clima(latitude, longitude):
         
             return {
             'temperatura' : temperatura,
-            'tempo' : tempo_traduzido,
+            'tempo' : tempo,
+            'tempo_traduz': tempo_traduzido,
             'cidade' : cidade_nome,
             'temp_max' : temp_max,
             'temp_min' : temp_min
@@ -60,9 +61,9 @@ def info_clima(latitude, longitude):
             return 'Erro: Dados de clima não encontrados na resposta da API.'
     else:
         return f'Erro na API de clima: {response_clima.status_code}'
-
+'''
 coordenadas = info_geo('Fortaleza', 'CE')
 lat = coordenadas[0]
 lon = coordenadas[1]
 
-print(info_clima(lat, lon))
+print(info_clima(lat, lon))'''

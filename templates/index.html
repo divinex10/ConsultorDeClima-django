@@ -22,14 +22,32 @@
                 <div class="info-principal">
                     <h2>{{ clima.cidade }}</h2>
                     <div class="temperatura">
+                        {% if clima.tempo in chuva %}
+                        <span class="icone">🌧️</span>
+
+                        {% elif clima.tempo in sol %}
                         <span class="icone">☀️</span>
+                        
+                        {% elif clima.tempo in trovao %}
+                        <span class="icone">⛈️</span>
+
+                        {% elif clima.tempo in nuvem %}
+                        <span class="icone">☁️</span>
+
+                        {% elif clima.tempo in neve %}
+                        <span class="icone">❄️</span>
+
+                        {% else %}
+                        <span class="icone">🤔</span>
+
+                        {% endif %}
                         <span class="valor">{{ clima.temperatura | floatformat:0 }}°C</span>
                     </div>
                     <div class="temp-min-max">
                         <span>Min:{{ clima.temp_min | floatformat:0 }}°C</span>
                         <span>Max:{{ clima.temp_max | floatformat:0 }}°C</span>
                     </div>
-                    <p class="condicao">{{ clima.tempo}}</p>
+                    <p class="condicao">{{ clima.tempo_traduz}}</p>
                 </div>
                 <div class="detalhes">
                     <div class="detalhe">
