@@ -6,16 +6,16 @@ def index(request):
 
     sol = ('Clear',)
 
-    nuvem = ('Cloud',)
+    nuvem = ('Clouds',)
 
     neve = ('Snow',)
 
     trovao = ('Thunderstorm',)
 
 
-    cidade = "Brasília"
+    cidade = "Fortaleza"
 
-    estado = "DF"
+    estado = "CE"
 
     coordenadas = info_geo(cidade, estado)
 

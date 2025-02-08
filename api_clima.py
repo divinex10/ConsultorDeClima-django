@@ -10,6 +10,7 @@ def info_geo(cidade, estado):
 
 
     url = F'http://api.openweathermap.org/geo/1.0/direct?q={cidade},{estado},&limit=1&appid=b274188bc5e9773a7a447f7fc220f0c6'
+
     response_geograph = requests.get(url)
 
     if response_geograph.status_code == 200:
@@ -39,6 +40,8 @@ def info_clima(latitude, longitude):
             tempo = info_clima['weather'][0]['main']
             temp_max = info_clima['main']['temp_max']
             temp_min = info_clima['main']['temp_min']
+            umidade = info_clima['main']['humidity']
+            vento = info_clima['wind']['speed']
 
             #tradução do tempo de en para pt-br
             tempo_traduzido = GoogleTranslator(source='en', target='pt').translate(tempo)
@@ -54,16 +57,18 @@ def info_clima(latitude, longitude):
             'tempo_traduz': tempo_traduzido,
             'cidade' : cidade_nome,
             'temp_max' : temp_max,
-            'temp_min' : temp_min
+            'temp_min' : temp_min,
+            'umidade' : umidade,
+            'vento' : int(vento) * 3.6,
                 }
         
         except:
             return 'Erro: Dados de clima não encontrados na resposta da API.'
     else:
         return f'Erro na API de clima: {response_clima.status_code}'
-'''
-coordenadas = info_geo('Fortaleza', 'CE')
+
+coordenadas = info_geo('Brasília', 'DF')
 lat = coordenadas[0]
 lon = coordenadas[1]
 
-print(info_clima(lat, lon))'''
+print(info_clima(lat, lon))

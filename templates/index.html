@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Previsão do Tempo</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
 </head>
 <body>
     <div class="container">
@@ -52,11 +53,11 @@
                 <div class="detalhes">
                     <div class="detalhe">
                         <span class="icone">💧</span>
-                        <span>Umidade: 65%</span>
+                        <span>Umidade: {{ clima.umidade }}</span>
                     </div>
                     <div class="detalhe">
                         <span class="icone">💨</span>
-                        <span>Vento: 12 km/h</span>
+                        <span>Vento: {{ clima.vento }} Km/h</span>
                     </div>
                 </div>
             </div>
