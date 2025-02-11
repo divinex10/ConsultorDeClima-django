@@ -13,9 +13,9 @@ def index(request):
     trovao = ('Thunderstorm',)
 
 
-    cidade = "Fortaleza"
+    cidade = "Cavalcante"
 
-    estado = "CE"
+    estado = "GO"
 
     coordenadas = info_geo(cidade, estado)
 
