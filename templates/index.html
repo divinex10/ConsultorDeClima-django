@@ -17,6 +17,7 @@
                 <button>🔍</button>
             </div>
         </header>
+    </div>
 
         <main>
             <div class="clima-atual">
@@ -45,8 +46,8 @@
                         <span class="valor">{{ clima.temperatura | floatformat:0 }}°C</span>
                     </div>
                     <div class="temp-min-max">
-                        <span>Min:{{ clima.temp_min | floatformat:0 }}°C</span>
-                        <span>Max:{{ clima.temp_max | floatformat:0 }}°C</span>
+                        <span>Mínima: {{ clima.temp_min | floatformat:0 }}°C</span>
+                        <span>Máxima: {{ clima.temp_max | floatformat:0 }}°C</span>
                     </div>
                     <p class="condicao">{{ clima.tempo_traduz}}</p>
                 </div>
